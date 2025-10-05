@@ -1,0 +1,384 @@
+package com.vcousien.northstar.features.mood.views
+
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.vcousien.northstar.core.designsystem.DesignTokens
+import com.vcousien.northstar.core.designsystem.Spacing
+import com.vcousien.northstar.core.designsystem.Typography
+import com.vcousien.northstar.core.designsystem.components.NSCard
+import com.vcousien.northstar.core.designsystem.components.NSEmptyState
+import com.vcousien.northstar.core.models.MoodEntry
+import com.vcousien.northstar.core.utils.Strings
+import com.vcousien.northstar.features.mood.viewmodels.MoodTrackingViewModel
+import kotlinx.datetime.TimeZone
+import kotlinx.datetime.toLocalDateTime
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+
+/**
+ * Main mood tracking view that displays mood history and provides access to mood entry functionality
+ * 
+ * This view shows:
+ * - Page header with title and current date
+ * - Today's mood summary card (when implemented)
+ * - Mood trends visualization (when implemented) 
+ * - Recent mood history list
+ * - Floating action button to add new mood entries
+ * 
+ * @param viewModel The mood tracking view model
+ * @param onAddMoodClick Callback when the add mood FAB is clicked
+ * @param onMoodEntryClick Callback when a mood entry is selected
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MoodLogView(
+    viewModel: MoodTrackingViewModel = hiltViewModel(),
+    onAddMoodClick: () -> Unit = {},
+    onMoodEntryClick: (String) -> Unit = {}
+) {
+    val moodEntries by viewModel.moodEntries.collectAsState()
+    var showAddMoodEntry by remember { mutableStateOf(false) }
+
+    Scaffold(
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = { showAddMoodEntry = true },
+                containerColor = DesignTokens.Colors.accent,
+                contentColor = DesignTokens.Colors.surface
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = Strings.Mood.addEntry
+                )
+            }
+        },
+        containerColor = DesignTokens.Colors.background
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+        ) {
+            // Header Section
+            MoodLogHeader()
+            
+            // Main Content
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(horizontal = Spacing.screenEdge),
+                verticalArrangement = Arrangement.spacedBy(Spacing.lg)
+            ) {
+                // Today's Mood Card (placeholder for future implementation)
+                item {
+                    TodayMoodCardPlaceholder(
+                        onAddMoodClick = { showAddMoodEntry = true }
+                    )
+                }
+                
+                // Mood Trends Card (placeholder for future implementation)
+                item {
+                    MoodTrendsCardPlaceholder()
+                }
+                
+                // Recent Mood History
+                item {
+                    RecentMoodHistoryCard(
+                        moodEntries = moodEntries,
+                        onEntryClick = onMoodEntryClick
+                    )
+                }
+            }
+        }
+    }
+    
+    // Add Mood Entry Sheet
+    if (showAddMoodEntry) {
+        AddMoodEntryView(
+            isPresented = showAddMoodEntry,
+            viewModel = viewModel,
+            onDismiss = { showAddMoodEntry = false }
+        )
+    }
+}
+
+/**
+ * Header component for the mood log view showing title and current date
+ */
+@Composable
+private fun MoodLogHeader() {
+    val currentDate = remember { Date() }
+    val dateFormatter = remember { 
+        SimpleDateFormat("EEEE, MMMM dd, yyyy", Locale.getDefault()) 
+    }
+    
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(
+                horizontal = Spacing.screenEdge,
+                vertical = Spacing.md
+            ),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(Spacing.sm)
+    ) {
+        Text(
+            text = Strings.Mood.title,
+            style = Typography.headlineMedium,
+            color = DesignTokens.Colors.textPrimary
+        )
+        
+        Text(
+            text = dateFormatter.format(currentDate),
+            style = Typography.titleSmall,
+            color = DesignTokens.Colors.textSecondary
+        )
+    }
+}
+
+/**
+ * Placeholder for today's mood card (will be implemented in Prompt #22)
+ */
+@Composable
+private fun TodayMoodCardPlaceholder(
+    onAddMoodClick: () -> Unit
+) {
+    NSCard(
+        onClick = onAddMoodClick
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(Spacing.md)
+        ) {
+            Text(
+                text = Strings.Mood.todayMood,
+                style = Typography.titleMedium,
+                color = DesignTokens.Colors.textPrimary
+            )
+            
+            Text(
+                text = Strings.Mood.howFeeling,
+                style = Typography.bodyMedium,
+                color = DesignTokens.Colors.textSecondary
+            )
+            
+            Text(
+                text = Strings.Mood.recordMood,
+                style = Typography.bodySmall,
+                color = DesignTokens.Colors.accent
+            )
+        }
+    }
+}
+
+/**
+ * Placeholder for mood trends card (will be implemented in Prompt #24)
+ */
+@Composable
+private fun MoodTrendsCardPlaceholder() {
+    NSCard {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(Spacing.md)
+        ) {
+            Text(
+                text = Strings.Mood.trends,
+                style = Typography.titleMedium,
+                color = DesignTokens.Colors.textPrimary
+            )
+            
+            Text(
+                text = "Mood trends visualization coming soon",
+                style = Typography.bodyMedium,
+                color = DesignTokens.Colors.textSecondary
+            )
+        }
+    }
+}
+
+/**
+ * Card showing recent mood history entries
+ * 
+ * @param moodEntries List of mood entries to display
+ * @param onEntryClick Callback when an entry is clicked
+ */
+@Composable
+private fun RecentMoodHistoryCard(
+    moodEntries: List<MoodEntry>,
+    onEntryClick: (String) -> Unit
+) {
+    val recentEntries = remember(moodEntries) {
+        moodEntries.sortedByDescending { it.dateAsInstant }.take(5)
+    }
+    
+    NSCard {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(Spacing.md)
+        ) {
+            Text(
+                text = Strings.Mood.moodHistory,
+                style = Typography.titleMedium,
+                color = DesignTokens.Colors.textPrimary
+            )
+            
+            if (recentEntries.isEmpty()) {
+                NSEmptyState(
+                    title = Strings.Mood.noEntries,
+                    subtitle = Strings.Mood.noEntriesDescription,
+                    modifier = Modifier.padding(vertical = Spacing.md)
+                )
+            } else {
+                recentEntries.forEachIndexed { index, entry ->
+                    MoodHistoryItem(
+                        entry = entry,
+                        onClick = { onEntryClick(entry.id) }
+                    )
+                    
+                    if (index < recentEntries.lastIndex) {
+                        HorizontalDivider(
+                            color = DesignTokens.Colors.divider,
+                            thickness = 1.dp
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * Individual mood history entry item
+ * 
+ * @param entry The mood entry to display
+ * @param onClick Callback when the item is clicked
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun MoodHistoryItem(
+    entry: MoodEntry,
+    onClick: () -> Unit
+) {
+    val dateFormatter = remember { 
+        SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()) 
+    }
+    
+    Card(
+        onClick = onClick,
+        colors = CardDefaults.cardColors(
+            containerColor = DesignTokens.Colors.surface
+        ),
+        shape = RoundedCornerShape(Spacing.CornerRadius.sm),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(Spacing.sm),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            // Date
+            Text(
+                text = dateFormatter.format(Date(entry.dateAsInstant.toEpochMilliseconds())),
+                style = Typography.bodyMedium,
+                color = DesignTokens.Colors.textPrimary
+            )
+            
+            // Mood level info
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(Spacing.xs)
+            ) {
+                Icon(
+                    imageVector = entry.level.icon,
+                    contentDescription = entry.level.getName(),
+                    modifier = Modifier.size(20.dp),
+                    tint = entry.level.getColor()
+                )
+                
+                Text(
+                    text = entry.level.getName(),
+                    style = Typography.bodySmall,
+                    color = DesignTokens.Colors.textSecondary
+                )
+                
+                Spacer(modifier = Modifier.width(Spacing.sm))
+                
+                Icon(
+                    imageVector = Icons.Default.ChevronRight,
+                    contentDescription = "View details",
+                    modifier = Modifier.size(16.dp),
+                    tint = DesignTokens.Colors.textSecondary
+                )
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MoodLogViewPreview() {
+    MaterialTheme {
+        MoodLogView()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun MoodLogHeaderPreview() {
+    MaterialTheme {
+        MoodLogHeader()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun RecentMoodHistoryCardPreview() {
+    MaterialTheme {
+        Column(
+            modifier = Modifier.padding(Spacing.screenEdge)
+        ) {
+            RecentMoodHistoryCard(
+                moodEntries = emptyList(),
+                onEntryClick = {}
+            )
+        }
+    }
+}

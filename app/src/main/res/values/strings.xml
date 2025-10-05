@@ -1,0 +1,326 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">North Star</string>
+
+    <!-- Authentication -->
+    <string name="auth_title">Authenticate</string>
+    <string name="auth_subtitle">Use %1$s to continue</string>
+    <string name="auth_authenticating">Authenticating...</string>
+    <string name="auth_instruction_fingerprint">Place your finger on the fingerprint sensor</string>
+    <string name="auth_instruction_face">Look at your device to authenticate</string>
+    <string name="auth_instruction_iris">Look at your device to authenticate</string>
+    <string name="auth_instruction_pin">Enter your device PIN or password to continue</string>
+    <string name="auth_button_authenticate">Authenticate</string>
+    <string name="auth_security_message">Your data is protected and stays private</string>
+
+    <!-- App Navigation -->
+    <string name="tabs_home">Home</string>
+    <string name="tabs_mood">Mood</string>
+    <string name="tabs_sleep">Sleep</string>
+    <string name="tabs_medication">Medication</string>
+    <string name="tabs_settings">Settings</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Welcome to North Star</string>
+    <string name="onboarding_welcome_description">Your personal guide to track and understand your mood cycles.</string>
+    <string name="onboarding_mood_title">Mood Tracking</string>
+    <string name="onboarding_mood_description">Easily record your mood each day. Observe trends to better understand yourself.</string>
+    <string name="onboarding_sleep_title">Sleep Tracking</string>
+    <string name="onboarding_sleep_description">Sleep affects your mood. Track your sleep habits to identify correlations.</string>
+    <string name="onboarding_medication_title">Medication Management</string>
+    <string name="onboarding_medication_description">Never miss your medications again. Simple reminders to help you stay consistent.</string>
+    <string name="onboarding_privacy_title">Privacy</string>
+    <string name="onboarding_privacy_description">Your data remains private. It\'s not shared and is stored only on your device.</string>
+    <string name="onboarding_previous">Previous</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_get_started">Get Started</string>
+
+    <!-- Home View -->
+    <string name="home_title">Dashboard</string>
+    <string name="home_good_morning">Good Morning</string>
+    <string name="home_good_afternoon">Good Afternoon</string>
+    <string name="home_good_evening">Good Evening</string>
+    <string name="home_today_overview">Today\'s Overview</string>
+    <string name="home_quick_actions">Quick Actions</string>
+    <string name="home_today_mood_title">Today\'s Mood</string>
+    <string name="home_how_feeling_today">How are you feeling today?</string>
+    <string name="home_record_mood_button">Record your mood</string>
+    <string name="home_recorded_at">Recorded at</string>
+    <string name="home_edit_button">Edit</string>
+    <string name="home_no_medications_today">No medications today</string>
+    <string name="home_no_medications_taken">No medications taken</string>
+    <string name="home_medications_taken">taken</string>
+    <string name="home_remaining_medications">remaining</string>
+    <string name="home_all_medications_taken">All medications taken</string>
+    <string name="home_medications_to_take">Medications to take</string>
+    <string name="home_next_reminder">Next Reminder</string>
+    <string name="home_no_reminders_scheduled">No reminders scheduled</string>
+    <string name="home_in_hours">In %d hour(s)</string>
+    <string name="home_in_minutes">In %d minute(s)</string>
+    <string name="home_now">Now</string>
+    <string name="home_user_default">there</string>
+
+    <!-- Mood Tracking -->
+    <string name="mood_title">Mood Tracking</string>
+    <string name="mood_add_entry">Add Mood Entry</string>
+    <string name="mood_today">Today\'s Mood</string>
+    <string name="mood_no_mood_today">No mood recorded today</string>
+    <string name="mood_record">Record your mood</string>
+    <string name="mood_history">Mood History</string>
+    <string name="mood_trends">Mood Trends</string>
+    <string name="mood_elevated">Elevated</string>
+    <string name="mood_good">Good</string>
+    <string name="mood_neutral">Neutral</string>
+    <string name="mood_low">Low</string>
+    <string name="mood_depressed">Depressed</string>
+    <string name="mood_severely_depressed">Severely depressed</string>
+    <string name="mood_slightly_low">Slightly low</string>
+    <string name="mood_slightly_elevated">Slightly elevated</string>
+    <string name="mood_highly_elevated">Highly elevated</string>
+    <string name="mood_manic">Manic</string>
+    <string name="mood_select">Select your mood</string>
+    <string name="mood_add_note">Add a note (optional)</string>
+    <string name="mood_save">Save Entry</string>
+    <string name="mood_cancel">Cancel</string>
+    <string name="mood_no_entries">No mood entries yet</string>
+    <string name="mood_no_entries_description">Start tracking your mood to see patterns and trends over time.</string>
+    <string name="mood_how_feeling">How are you feeling?</string>
+    <string name="mood_record_title">Record Your Mood</string>
+    <string name="mood_energy_level">Energy Level</string>
+    <string name="mood_anxiety_level">Anxiety Level</string>
+    <string name="mood_notes_label">Notes</string>
+    <string name="mood_energy_very_low">Very Low</string>
+    <string name="mood_energy_average">Average</string>
+    <string name="mood_energy_very_high">Very High</string>
+    <string name="mood_anxiety_none">None</string>
+    <string name="mood_anxiety_moderate">Moderate</string>
+    <string name="mood_anxiety_severe">Severe</string>
+
+    <!-- Sleep Tracking -->
+    <string name="sleep_title">Sleep Tracking</string>
+    <string name="sleep_add_entry">Add Sleep Entry</string>
+    <string name="sleep_today">Today\'s Sleep</string>
+    <string name="sleep_last_night">Last Night</string>
+    <string name="sleep_history">Sleep History</string>
+    <string name="sleep_stats">Sleep Statistics</string>
+    <string name="sleep_bedtime">Bedtime</string>
+    <string name="sleep_wake_time">Wake Time</string>
+    <string name="sleep_quality">Sleep Quality</string>
+    <string name="sleep_save">Save Entry</string>
+    <string name="sleep_quality_excellent">Excellent</string>
+    <string name="sleep_quality_good">Good</string>
+    <string name="sleep_quality_fair">Fair</string>
+    <string name="sleep_quality_poor">Poor</string>
+    <string name="sleep_avg_duration">Average Duration</string>
+    <string name="sleep_avg_quality">Average Quality</string>
+    <string name="sleep_hours_slept">hours slept</string>
+    <string name="sleep_no_entries">No sleep entries yet</string>
+    <string name="sleep_no_entries_description">Start tracking your sleep to understand how it affects your mood and well-being.</string>
+    <string name="sleep_no_sleep_recorded">No sleep recorded</string>
+    <string name="sleep_record_last_night">Record your sleep from last night</string>
+    <string name="sleep_quality_label">Quality:</string>
+    <string name="sleep_add_sleep_title">Add Sleep Entry</string>
+    <string name="sleep_sleep_times_header">Sleep Times</string>
+    <string name="sleep_bedtime_label">Bedtime</string>
+    <string name="sleep_wake_time_label">Wake Time</string>
+    <string name="sleep_quality_header">Sleep Quality</string>
+    <string name="sleep_quality_question">How would you rate your sleep?</string>
+    <string name="sleep_quality_poor_label">Poor</string>
+    <string name="sleep_quality_excellent_label">Excellent</string>
+    <string name="sleep_interruptions_label">Interruptions</string>
+    <string name="sleep_notes_header">Notes</string>
+    <string name="sleep_save_button">Save</string>
+    <string name="sleep_cancel_button">Cancel</string>
+    <string name="sleep_quality_short">Quality</string>
+    <string name="sleep_no_sleep_today">No sleep recorded</string>
+    <string name="sleep_record_last_night_sleep">Record your sleep from last night</string>
+    <string name="sleep_add_action">Add</string>
+
+    <!-- Medication -->
+    <string name="medication_title">Medications</string>
+    <string name="medication_add">Add Medication</string>
+    <string name="medication_medications">Medications</string>
+    <string name="medication_tracking">Tracking</string>
+    <string name="medication_stats">Statistics</string>
+    <string name="medication_name">Medication Name</string>
+    <string name="medication_dosage">Dosage</string>
+    <string name="medication_frequency">Frequency</string>
+    <string name="medication_start_date">Start Date</string>
+    <string name="medication_end_date">End Date</string>
+    <string name="medication_notes">Notes</string>
+    <string name="medication_color">Color</string>
+    <string name="medication_today">Today\'s Medications</string>
+    <string name="medication_taken">Taken</string>
+    <string name="medication_not_taken">Not Taken</string>
+    <string name="medication_mark_taken">Mark as Taken</string>
+    <string name="medication_mark_not_taken">Mark as Not Taken</string>
+    <string name="medication_my_medications">My Medications</string>
+    <string name="medication_reminders">Reminders</string>
+    <string name="medication_reminder_time">Reminder Time</string>
+    <string name="medication_enable_reminders">Enable Reminders</string>
+    <string name="medication_reminder_scheduled">Reminder scheduled</string>
+    <string name="medication_adherence_rate">Adherence Rate</string>
+    <string name="medication_total_doses">Total Doses</string>
+    <string name="medication_missed_doses">Missed Doses</string>
+    <string name="medication_streak">Current Streak</string>
+    <string name="medication_days">days</string>
+    <string name="medication_no_medications">No medications added</string>
+    <string name="medication_no_medications_description">Add your medications to start tracking and receive reminders.</string>
+    <string name="medication_no_entries">No medication entries</string>
+    <string name="medication_no_entries_description">Start taking your medications and track your adherence.</string>
+    <string name="medication_information_header">Information</string>
+    <string name="medication_medication_name_field">Medication Name</string>
+    <string name="medication_dosage_header">Dosage</string>
+    <string name="medication_different_dosages">Different dosages by time</string>
+    <string name="medication_dosage_example">Dosage (e.g. 10mg)</string>
+    <string name="medication_frequency_header">Frequency</string>
+    <string name="medication_time_of_day_header">Time of Day</string>
+    <string name="medication_notes_header">Notes</string>
+    <string name="medication_save_action">Save</string>
+    <string name="medication_cancel_action">Cancel</string>
+    <string name="medication_add_medication_title">Add Medication</string>
+    <string name="medication_no_medications_today">No medications scheduled for today</string>
+    <string name="medication_all_medications_taken_today">All medications taken</string>
+    <string name="medication_medications_to_take_today">Medications to take</string>
+    <string name="medication_tracking_title">Medication Tracking</string>
+    <string name="medication_period_label">Period:</string>
+    <string name="medication_days_suffix">days</string>
+    <string name="medication_excellent_adherence">Excellent adherence! Keep it up!</string>
+    <string name="medication_good_adherence">Good adherence. Try to improve consistency.</string>
+    <string name="medication_average_adherence">Average adherence. Consider using reminders.</string>
+    <string name="medication_low_adherence">Low adherence. Talk to your doctor.</string>
+    <string name="medication_tracking_for_date">Tracking for</string>
+    <string name="medication_taken_at">Taken at</string>
+    <string name="medication_not_taken_status">Not taken</string>
+    <string name="medication_no_medications_date">No medications</string>
+    <string name="medication_no_medications_scheduled_date">No medications scheduled for this date</string>
+    <string name="medication_side_effects_title">Side Effects</string>
+    <string name="medication_severity_label">Severity:</string>
+    <string name="medication_no_side_effects_date">No side effects reported for this date</string>
+    <string name="medication_analysis_period">Analysis Period:</string>
+    <string name="medication_overall_adherence">Overall Adherence Rate</string>
+    <string name="medication_adherence_by_medication">Adherence by Medication</string>
+    <string name="medication_side_effects_summary">Side Effects Summary</string>
+    <string name="medication_no_side_effects_reported">No side effects reported</string>
+    <string name="medication_add_medications_stats">Add medications to see statistics</string>
+    <string name="medication_take_as_needed">Take as needed</string>
+    <string name="medication_reminders_settings">Reminder Settings</string>
+    <string name="medication_general_settings">General Settings</string>
+    <string name="medication_reminder_schedule">Reminder Schedule</string>
+    <string name="medication_enable_reminders_to_configure">Enable reminders to configure times</string>
+    <string name="medication_preview">Preview</string>
+    <string name="medication_no_reminders_enabled">No reminders enabled</string>
+    <string name="medication_reminders_disabled">Reminders are disabled</string>
+    <string name="medication_export_title">Export Data</string>
+    <string name="medication_export_period">Period</string>
+    <string name="medication_export_format">Export Format</string>
+    <string name="medication_export_content">Content</string>
+    <string name="medication_export_include_side_effects">Include side effects</string>
+    <string name="medication_export_include_notes">Include notes</string>
+    <string name="medication_export_preview">Preview</string>
+    <string name="medication_export_preview_title">The report will include:</string>
+    <string name="medication_export_button">Export Data</string>
+    <string name="medication_export_medications_singular">%d medication</string>
+    <string name="medication_export_medications_plural">%d medications</string>
+    <string name="medication_export_entries_singular">%d entry</string>
+    <string name="medication_export_entries_plural">%d entries</string>
+    <string name="medication_export_side_effects_singular">%d side effect</string>
+    <string name="medication_export_side_effects_plural">%d side effects</string>
+    <string name="medication_export_adherence_rate">Adherence rate</string>
+
+    <!-- Time of Day -->
+    <string name="timeofday_morning">Morning</string>
+    <string name="timeofday_noon">Noon</string>
+    <string name="timeofday_evening">Evening</string>
+    <string name="timeofday_bedtime">Bedtime</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_general">General</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_privacy">Privacy</string>
+    <string name="settings_data">Data</string>
+    <string name="settings_sync">Sync</string>
+    <string name="settings_export">Export Data</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version</string>
+    <string name="settings_cloud_sync">Cloud Sync</string>
+    <string name="settings_cloud_sync_description">Sync your data across all your devices using cloud storage.</string>
+    <string name="settings_sync_status">Sync Status</string>
+    <string name="settings_last_sync">Last Sync</string>
+    <string name="settings_sync_now">Sync Now</string>
+    <string name="settings_data_privacy">Data Privacy</string>
+    <string name="settings_local_storage">Local Storage Only</string>
+    <string name="settings_privacy_description">Your data is stored securely on your device and never shared with third parties.</string>
+
+    <!-- Insights -->
+    <string name="insights_title">Insights</string>
+    <string name="insights_mood_trends">Mood Trends</string>
+    <string name="insights_sleep_correlation">Sleep &amp; Mood Correlation</string>
+    <string name="insights_medication_effect">Medication Effects</string>
+    <string name="insights_patterns">Patterns</string>
+    <string name="insights_recommendations">Recommendations</string>
+    <string name="insights_coming_soon">Coming Soon</string>
+    <string name="insights_coming_soon_description">Advanced insights and analytics are coming in a future update.</string>
+    <string name="insights_coming_soon_alerts_title">Early Alerts</string>
+    <string name="insights_coming_soon_alerts_description">Detection of cycle changes</string>
+    <string name="insights_coming_soon_reports_title">Care Provider Reports</string>
+    <string name="insights_coming_soon_reports_description">Share data with your healthcare team</string>
+    <string name="insights_coming_soon_analytics_title">Advanced Analytics</string>
+    <string name="insights_coming_soon_analytics_description">Understand your triggers and protective factors</string>
+    <string name="insights_medication_wellness_correlation">Medication and Wellness Correlation</string>
+    <string name="insights_no_medications_for_analysis">No medications recorded for analysis</string>
+    <string name="insights_insufficient_data">Not enough data for analysis</string>
+    <string name="insights_mood_label">Mood:</string>
+    <string name="insights_sleep_label">Sleep:</string>
+    <string name="insights_adherence_label">Adherence:</string>
+    <string name="insights_improves">improves</string>
+    <string name="insights_worsens">worsens</string>
+    <string name="insights_disrupts">disrupts</string>
+    <string name="insights_neutral">neutral</string>
+    <string name="insights_advice">Advice</string>
+    <string name="insights_correlation_continue_recording">Continue recording your sleep and mood to see detailed analyses.</string>
+    <string name="insights_more_data_needed">More data needed</string>
+    <string name="insights_minimum_data_required">At least 7 days of data to see trends</string>
+
+    <!-- Common UI Elements -->
+    <string name="common_save">Save</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_edit">Edit</string>
+    <string name="common_done">Done</string>
+    <string name="common_ok">OK</string>
+    <string name="common_confirm">Confirm</string>
+    <string name="common_yes">Yes</string>
+    <string name="common_no">No</string>
+    <string name="common_loading">Loading…</string>
+    <string name="common_error">Error</string>
+    <string name="common_retry">Retry</string>
+    <string name="common_today">Today</string>
+    <string name="common_yesterday">Yesterday</string>
+    <string name="common_this_week">This Week</string>
+    <string name="common_this_month">This Month</string>
+    <string name="common_optional">optional</string>
+    <string name="common_add">Add</string>
+    <string name="common_take">Take</string>
+    <string name="common_taken">Taken</string>
+
+    <!-- Error Messages -->
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="error_data">Unable to load data. Please try again.</string>
+    <string name="error_save">Unable to save data. Please try again.</string>
+    <string name="error_sync">Sync failed. Please try again later.</string>
+    <string name="error_notification">Unable to schedule notification.</string>
+
+    <!-- Notifications -->
+    <string name="notification_medication_reminder">Time to take your medication</string>
+    <string name="notification_mood_reminder">How are you feeling today?</string>
+    <string name="notification_sleep_reminder">Time to log your sleep</string>
+
+    <!-- Date Formats -->
+    <string name="date_format_short">MMM d</string>
+    <string name="date_format_medium">MMM d, yyyy</string>
+    <string name="date_format_time">h:mm a</string>
+    <string name="date_format_datetime">MMM d, yyyy h:mm a</string>
+</resources>

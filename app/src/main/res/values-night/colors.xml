@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NorthStar Brand Colors - Dark Theme Variants -->
+    <color name="space_cadet">#FF1E2952</color>
+    <color name="seashell">#FF32174D</color> <!-- Darker for dark theme -->
+    <color name="russian_violet">#FF1E2952</color>
+    <color name="apricot">#FFFBCEB1</color>
+    <color name="seashell2">#FF121212</color> <!-- Dark background -->
+    
+    <!-- Text Colors - Dark Theme -->
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="soft_lavender">#FFB8AECC</color>
+    <color name="soft_lavender_dark">#FFB8AECC</color>
+    <color name="pale_mint">#4DB3D9CC</color>
+    <color name="pale_mint_dark">#4DB3D9CC</color>
+    
+    <!-- Mood Colors - Dark Theme (using dark variants) -->
+    <color name="mood_depressed">#CC3333FF</color>
+    <color name="mood_low">#806666FF</color>
+    <color name="mood_neutral">#FFB3C8CC</color>
+    <color name="mood_good">#FFFF8833</color>
+    <color name="mood_elevated">#FFFF3333</color>
+    
+    <!-- Override background for dark theme -->
+    <color name="dark_background">#FF121212</color>
+</resources>

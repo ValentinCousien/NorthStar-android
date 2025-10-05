@@ -1,0 +1,326 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">North Star</string>
+
+    <!-- Authentication -->
+    <string name="auth_title">S\'authentifier</string>
+    <string name="auth_subtitle">Utilisez %1$s pour continuer</string>
+    <string name="auth_authenticating">Authentification...</string>
+    <string name="auth_instruction_fingerprint">Placez votre doigt sur le capteur d\'empreinte</string>
+    <string name="auth_instruction_face">Regardez votre appareil pour vous authentifier</string>
+    <string name="auth_instruction_iris">Regardez votre appareil pour vous authentifier</string>
+    <string name="auth_instruction_pin">Entrez votre code PIN ou mot de passe pour continuer</string>
+    <string name="auth_button_authenticate">S\'authentifier</string>
+    <string name="auth_security_message">Vos données sont protégées et restent privées</string>
+
+    <!-- App Navigation -->
+    <string name="tabs_home">Accueil</string>
+    <string name="tabs_mood">Humeur</string>
+    <string name="tabs_sleep">Sommeil</string>
+    <string name="tabs_medication">Médicaments</string>
+    <string name="tabs_settings">Réglages</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Bienvenue dans North Star</string>
+    <string name="onboarding_welcome_description">Votre guide personnel pour suivre et comprendre vos cycles d\'humeur.</string>
+    <string name="onboarding_mood_title">Suivi de l\'humeur</string>
+    <string name="onboarding_mood_description">Enregistrez facilement votre humeur chaque jour. Observez les tendances pour mieux vous comprendre.</string>
+    <string name="onboarding_sleep_title">Suivi du sommeil</string>
+    <string name="onboarding_sleep_description">Le sommeil influence votre humeur. Suivez vos habitudes de sommeil pour identifier des corrélations.</string>
+    <string name="onboarding_medication_title">Gestion des médicaments</string>
+    <string name="onboarding_medication_description">N\'oubliez plus jamais vos médicaments. Des rappels simples pour vous aider à rester régulier.</string>
+    <string name="onboarding_privacy_title">Confidentialité</string>
+    <string name="onboarding_privacy_description">Vos données restent privées. Elles ne sont jamais partagées et sont stockées uniquement sur votre appareil.</string>
+    <string name="onboarding_previous">Précédent</string>
+    <string name="onboarding_next">Suivant</string>
+    <string name="onboarding_get_started">Commencer</string>
+
+    <!-- Home View -->
+    <string name="home_title">Tableau de bord</string>
+    <string name="home_good_morning">Bonjour</string>
+    <string name="home_good_afternoon">Bon après-midi</string>
+    <string name="home_good_evening">Bonsoir</string>
+    <string name="home_today_overview">Aperçu du jour</string>
+    <string name="home_quick_actions">Actions rapides</string>
+    <string name="home_today_mood_title">Humeur du jour</string>
+    <string name="home_how_feeling_today">Comment vous sentez-vous aujourd\'hui ?</string>
+    <string name="home_record_mood_button">Enregistrer mon humeur</string>
+    <string name="home_recorded_at">Enregistré à</string>
+    <string name="home_edit_button">Modifier</string>
+    <string name="home_no_medications_today">Aucun médicament aujourd\'hui</string>
+    <string name="home_no_medications_taken">Aucun médicament pris</string>
+    <string name="home_medications_taken">pris</string>
+    <string name="home_remaining_medications">restant</string>
+    <string name="home_all_medications_taken">Tous les médicaments pris</string>
+    <string name="home_medications_to_take">Médicaments à prendre</string>
+    <string name="home_next_reminder">Prochain rappel</string>
+    <string name="home_no_reminders_scheduled">Aucun rappel programmé</string>
+    <string name="home_in_hours">Dans %d heure(s)</string>
+    <string name="home_in_minutes">Dans %d minute(s)</string>
+    <string name="home_now">Maintenant</string>
+    <string name="home_user_default">là</string>
+
+    <!-- Mood Tracking -->
+    <string name="mood_title">Suivi de l\'humeur</string>
+    <string name="mood_add_entry">Ajouter une entrée</string>
+    <string name="mood_today">Humeur du jour</string>
+    <string name="mood_no_mood_today">Aucune humeur enregistrée aujourd\'hui</string>
+    <string name="mood_record">Enregistrer votre humeur</string>
+    <string name="mood_history">Historique</string>
+    <string name="mood_trends">Tendances</string>
+    <string name="mood_elevated">Élevée</string>
+    <string name="mood_good">Bonne</string>
+    <string name="mood_neutral">Neutre</string>
+    <string name="mood_low">Basse</string>
+    <string name="mood_depressed">Dépressive</string>
+    <string name="mood_severely_depressed">Sévèrement dépressive</string>
+    <string name="mood_slightly_low">Légèrement basse</string>
+    <string name="mood_slightly_elevated">Légèrement élevée</string>
+    <string name="mood_highly_elevated">Très élevée</string>
+    <string name="mood_manic">Maniaque</string>
+    <string name="mood_select">Choisissez votre humeur</string>
+    <string name="mood_add_note">Ajouter une note (optionnel)</string>
+    <string name="mood_save">Enregistrer</string>
+    <string name="mood_cancel">Annuler</string>
+    <string name="mood_no_entries">Aucune entrée d\'humeur</string>
+    <string name="mood_no_entries_description">Commencez à suivre votre humeur pour voir les tendances et motifs au fil du temps.</string>
+    <string name="mood_how_feeling">Comment vous sentez-vous ?</string>
+    <string name="mood_record_title">Enregistrer votre humeur</string>
+    <string name="mood_energy_level">Niveau d\'énergie</string>
+    <string name="mood_anxiety_level">Niveau d\'anxiété</string>
+    <string name="mood_notes_label">Notes</string>
+    <string name="mood_energy_very_low">Très bas</string>
+    <string name="mood_energy_average">Moyen</string>
+    <string name="mood_energy_very_high">Très élevé</string>
+    <string name="mood_anxiety_none">Aucune</string>
+    <string name="mood_anxiety_moderate">Modérée</string>
+    <string name="mood_anxiety_severe">Sévère</string>
+
+    <!-- Sleep Tracking -->
+    <string name="sleep_title">Suivi du sommeil</string>
+    <string name="sleep_add_entry">Ajouter une entrée</string>
+    <string name="sleep_today">Sommeil du jour</string>
+    <string name="sleep_last_night">Nuit dernière</string>
+    <string name="sleep_history">Historique</string>
+    <string name="sleep_stats">Statistiques</string>
+    <string name="sleep_bedtime">Coucher</string>
+    <string name="sleep_wake_time">Réveil</string>
+    <string name="sleep_quality">Qualité du sommeil</string>
+    <string name="sleep_save">Enregistrer</string>
+    <string name="sleep_quality_excellent">Excellente</string>
+    <string name="sleep_quality_good">Bonne</string>
+    <string name="sleep_quality_fair">Correcte</string>
+    <string name="sleep_quality_poor">Mauvaise</string>
+    <string name="sleep_avg_duration">Durée moyenne</string>
+    <string name="sleep_avg_quality">Qualité moyenne</string>
+    <string name="sleep_hours_slept">heures de sommeil</string>
+    <string name="sleep_no_entries">Aucune donnée de sommeil</string>
+    <string name="sleep_no_entries_description">Commencez à suivre votre sommeil pour comprendre son impact sur votre humeur et bien-être.</string>
+    <string name="sleep_no_sleep_recorded">Aucun sommeil enregistré</string>
+    <string name="sleep_record_last_night">Enregistrer votre sommeil de la nuit dernière</string>
+    <string name="sleep_quality_label">Qualité :</string>
+    <string name="sleep_add_sleep_title">Ajouter un sommeil</string>
+    <string name="sleep_sleep_times_header">Horaires de sommeil</string>
+    <string name="sleep_bedtime_label">Heure de coucher</string>
+    <string name="sleep_wake_time_label">Heure de réveil</string>
+    <string name="sleep_quality_header">Qualité du sommeil</string>
+    <string name="sleep_quality_question">Comment évaluez-vous votre sommeil ?</string>
+    <string name="sleep_quality_poor_label">Mauvais</string>
+    <string name="sleep_quality_excellent_label">Excellent</string>
+    <string name="sleep_interruptions_label">Interruptions</string>
+    <string name="sleep_notes_header">Notes</string>
+    <string name="sleep_save_button">Enregistrer</string>
+    <string name="sleep_cancel_button">Annuler</string>
+    <string name="sleep_quality_short">Qualité</string>
+    <string name="sleep_no_sleep_today">Aucun sommeil enregistré</string>
+    <string name="sleep_record_last_night_sleep">Enregistrer votre sommeil de la nuit dernière</string>
+    <string name="sleep_add_action">Ajouter</string>
+
+    <!-- Medication -->
+    <string name="medication_title">Médicaments</string>
+    <string name="medication_add">Ajouter un médicament</string>
+    <string name="medication_medications">Médicaments</string>
+    <string name="medication_tracking">Suivi</string>
+    <string name="medication_stats">Statistiques</string>
+    <string name="medication_name">Nom du médicament</string>
+    <string name="medication_dosage">Posologie</string>
+    <string name="medication_frequency">Fréquence</string>
+    <string name="medication_start_date">Date de début</string>
+    <string name="medication_end_date">Date de fin</string>
+    <string name="medication_notes">Notes</string>
+    <string name="medication_color">Couleur</string>
+    <string name="medication_today">Médicaments du jour</string>
+    <string name="medication_taken">Pris</string>
+    <string name="medication_not_taken">Non pris</string>
+    <string name="medication_mark_taken">Marquer comme pris</string>
+    <string name="medication_mark_not_taken">Marquer comme non pris</string>
+    <string name="medication_my_medications">Mes médicaments</string>
+    <string name="medication_reminders">Rappels</string>
+    <string name="medication_reminder_time">Heure du rappel</string>
+    <string name="medication_enable_reminders">Activer les rappels</string>
+    <string name="medication_reminder_scheduled">Rappel programmé</string>
+    <string name="medication_adherence_rate">Taux d\'observance</string>
+    <string name="medication_total_doses">Prises totales</string>
+    <string name="medication_missed_doses">Prises manquées</string>
+    <string name="medication_streak">Série en cours</string>
+    <string name="medication_days">jours</string>
+    <string name="medication_no_medications">Aucun médicament ajouté</string>
+    <string name="medication_no_medications_description">Ajoutez vos médicaments pour commencer le suivi et recevoir des rappels.</string>
+    <string name="medication_no_entries">Aucune prise enregistrée</string>
+    <string name="medication_no_entries_description">Commencez à prendre vos médicaments et suivez votre observance.</string>
+    <string name="medication_information_header">Informations</string>
+    <string name="medication_medication_name_field">Nom du médicament</string>
+    <string name="medication_dosage_header">Dosage</string>
+    <string name="medication_different_dosages">Dosages différents selon les moments</string>
+    <string name="medication_dosage_example">Dosage (ex: 10mg)</string>
+    <string name="medication_frequency_header">Fréquence</string>
+    <string name="medication_time_of_day_header">Moment de la journée</string>
+    <string name="medication_notes_header">Notes</string>
+    <string name="medication_save_action">Enregistrer</string>
+    <string name="medication_cancel_action">Annuler</string>
+    <string name="medication_add_medication_title">Ajouter un médicament</string>
+    <string name="medication_no_medications_today">Aucun médicament programmé pour aujourd\'hui</string>
+    <string name="medication_all_medications_taken_today">Tous les médicaments pris</string>
+    <string name="medication_medications_to_take_today">Médicaments à prendre</string>
+    <string name="medication_tracking_title">Suivi des médicaments</string>
+    <string name="medication_period_label">Période :</string>
+    <string name="medication_days_suffix">jours</string>
+    <string name="medication_excellent_adherence">Excellente observance ! Continuez ainsi !</string>
+    <string name="medication_good_adherence">Bonne observance. Essayez d\'améliorer la régularité.</string>
+    <string name="medication_average_adherence">Observance moyenne. Pensez à utiliser des rappels.</string>
+    <string name="medication_low_adherence">Faible observance. Parlez-en à votre médecin.</string>
+    <string name="medication_tracking_for_date">Suivi pour le</string>
+    <string name="medication_taken_at">Pris à</string>
+    <string name="medication_not_taken_status">Non pris</string>
+    <string name="medication_no_medications_date">Aucun médicament</string>
+    <string name="medication_no_medications_scheduled_date">Aucun médicament programmé pour cette date</string>
+    <string name="medication_side_effects_title">Effets secondaires</string>
+    <string name="medication_severity_label">Sévérité :</string>
+    <string name="medication_no_side_effects_date">Aucun effet secondaire signalé pour cette date</string>
+    <string name="medication_analysis_period">Période d\'analyse :</string>
+    <string name="medication_overall_adherence">Taux d\'observance global</string>
+    <string name="medication_adherence_by_medication">Observance par médicament</string>
+    <string name="medication_side_effects_summary">Résumé des effets secondaires</string>
+    <string name="medication_no_side_effects_reported">Aucun effet secondaire signalé</string>
+    <string name="medication_add_medications_stats">Ajoutez des médicaments pour voir les statistiques</string>
+    <string name="medication_take_as_needed">À prendre si besoin</string>
+    <string name="medication_reminders_settings">Paramètres des rappels</string>
+    <string name="medication_general_settings">Configuration générale</string>
+    <string name="medication_reminder_schedule">Horaires des rappels</string>
+    <string name="medication_enable_reminders_to_configure">Activez les rappels pour configurer les horaires</string>
+    <string name="medication_preview">Aperçu</string>
+    <string name="medication_no_reminders_enabled">Aucun rappel activé</string>
+    <string name="medication_reminders_disabled">Les rappels sont désactivés</string>
+    <string name="medication_export_title">Exporter les données</string>
+    <string name="medication_export_period">Période</string>
+    <string name="medication_export_format">Format d\'export</string>
+    <string name="medication_export_content">Contenu</string>
+    <string name="medication_export_include_side_effects">Inclure les effets secondaires</string>
+    <string name="medication_export_include_notes">Inclure les notes</string>
+    <string name="medication_export_preview">Aperçu</string>
+    <string name="medication_export_preview_title">Le rapport inclura :</string>
+    <string name="medication_export_button">Exporter les données</string>
+    <string name="medication_export_medications_singular">%d médicament</string>
+    <string name="medication_export_medications_plural">%d médicaments</string>
+    <string name="medication_export_entries_singular">%d prise</string>
+    <string name="medication_export_entries_plural">%d prises</string>
+    <string name="medication_export_side_effects_singular">%d effet secondaire</string>
+    <string name="medication_export_side_effects_plural">%d effets secondaires</string>
+    <string name="medication_export_adherence_rate">Taux d\'observance</string>
+
+    <!-- Time of Day -->
+    <string name="timeofday_morning">Matin</string>
+    <string name="timeofday_noon">Midi</string>
+    <string name="timeofday_evening">Soir</string>
+    <string name="timeofday_bedtime">Coucher</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Réglages</string>
+    <string name="settings_general">Général</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_privacy">Confidentialité</string>
+    <string name="settings_data">Données</string>
+    <string name="settings_sync">Synchronisation</string>
+    <string name="settings_export">Exporter les données</string>
+    <string name="settings_about">À propos</string>
+    <string name="settings_version">Version</string>
+    <string name="settings_cloud_sync">Synchronisation cloud</string>
+    <string name="settings_cloud_sync_description">Synchronisez vos données sur tous vos appareils via le stockage cloud.</string>
+    <string name="settings_sync_status">État de la synchronisation</string>
+    <string name="settings_last_sync">Dernière synchronisation</string>
+    <string name="settings_sync_now">Synchroniser maintenant</string>
+    <string name="settings_data_privacy">Confidentialité des données</string>
+    <string name="settings_local_storage">Stockage local uniquement</string>
+    <string name="settings_privacy_description">Vos données sont stockées en sécurité sur votre appareil et ne sont jamais partagées.</string>
+
+    <!-- Insights -->
+    <string name="insights_title">Analyses</string>
+    <string name="insights_mood_trends">Tendances d\'humeur</string>
+    <string name="insights_sleep_correlation">Corrélation sommeil-humeur</string>
+    <string name="insights_medication_effect">Effets des médicaments</string>
+    <string name="insights_patterns">Motifs</string>
+    <string name="insights_recommendations">Recommandations</string>
+    <string name="insights_coming_soon">Bientôt disponible</string>
+    <string name="insights_coming_soon_description">Des analyses et statistiques avancées arriveront dans une prochaine mise à jour.</string>
+    <string name="insights_coming_soon_alerts_title">Alertes précoces</string>
+    <string name="insights_coming_soon_alerts_description">Détection des changements de cycle</string>
+    <string name="insights_coming_soon_reports_title">Rapports pour le médecin</string>
+    <string name="insights_coming_soon_reports_description">Partagez vos données avec votre équipe soignante</string>
+    <string name="insights_coming_soon_analytics_title">Analyses avancées</string>
+    <string name="insights_coming_soon_analytics_description">Comprenez vos déclencheurs et facteurs protecteurs</string>
+    <string name="insights_medication_wellness_correlation">Corrélation médicaments et bien-être</string>
+    <string name="insights_no_medications_for_analysis">Aucun médicament enregistré pour l\'analyse</string>
+    <string name="insights_insufficient_data">Pas assez de données pour l\'analyse</string>
+    <string name="insights_mood_label">Humeur :</string>
+    <string name="insights_sleep_label">Sommeil :</string>
+    <string name="insights_adherence_label">Adhésion :</string>
+    <string name="insights_improves">améliore</string>
+    <string name="insights_worsens">détériore</string>
+    <string name="insights_disrupts">perturbe</string>
+    <string name="insights_neutral">neutre</string>
+    <string name="insights_advice">Conseil</string>
+    <string name="insights_correlation_continue_recording">Continuez à enregistrer votre sommeil et humeur pour voir des analyses détaillées.</string>
+    <string name="insights_more_data_needed">Plus de données nécessaires</string>
+    <string name="insights_minimum_data_required">Au moins 7 jours de données pour voir les tendances</string>
+
+    <!-- Common UI Elements -->
+    <string name="common_save">Enregistrer</string>
+    <string name="common_cancel">Annuler</string>
+    <string name="common_delete">Supprimer</string>
+    <string name="common_edit">Modifier</string>
+    <string name="common_done">Terminé</string>
+    <string name="common_ok">OK</string>
+    <string name="common_confirm">Confirmer</string>
+    <string name="common_yes">Oui</string>
+    <string name="common_no">Non</string>
+    <string name="common_loading">Chargement…</string>
+    <string name="common_error">Erreur</string>
+    <string name="common_retry">Réessayer</string>
+    <string name="common_today">Aujourd\'hui</string>
+    <string name="common_yesterday">Hier</string>
+    <string name="common_this_week">Cette semaine</string>
+    <string name="common_this_month">Ce mois-ci</string>
+    <string name="common_optional">optionnel</string>
+    <string name="common_add">Ajouter</string>
+    <string name="common_take">Prendre</string>
+    <string name="common_taken">Pris</string>
+
+    <!-- Error Messages -->
+    <string name="error_generic">Une erreur s\'est produite. Veuillez réessayer.</string>
+    <string name="error_network">Erreur réseau. Vérifiez votre connexion internet.</string>
+    <string name="error_data">Impossible de charger les données. Veuillez réessayer.</string>
+    <string name="error_save">Impossible d\'enregistrer. Veuillez réessayer.</string>
+    <string name="error_sync">Échec de la synchronisation. Réessayez plus tard.</string>
+    <string name="error_notification">Impossible de programmer la notification.</string>
+
+    <!-- Notifications -->
+    <string name="notification_medication_reminder">Il est temps de prendre vos médicaments</string>
+    <string name="notification_mood_reminder">Comment vous sentez-vous aujourd\'hui ?</string>
+    <string name="notification_sleep_reminder">N\'oubliez pas d\'enregistrer votre sommeil</string>
+
+    <!-- Date Formats -->
+    <string name="date_format_short">d MMM</string>
+    <string name="date_format_medium">d MMM yyyy</string>
+    <string name="date_format_time">HH:mm</string>
+    <string name="date_format_datetime">d MMM yyyy HH:mm</string>
+</resources>

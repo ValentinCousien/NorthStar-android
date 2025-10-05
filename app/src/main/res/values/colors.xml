@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NorthStar Brand Colors -->
+    <color name="space_cadet">#FF1E2952</color>
+    <color name="seashell">#FFFEF5EE</color>
+    <color name="russian_violet">#FF32174D</color>
+    <color name="apricot">#FFFBCEB1</color>
+    <color name="seashell2">#FFFEEEEE</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FF000000</color>
+    <color name="soft_lavender">#FFA696BF</color>
+    <color name="soft_lavender_dark">#FFB8AECC</color>
+    <color name="pale_mint">#4D99C0B8</color>
+    <color name="pale_mint_dark">#4DB3D9CC</color>
+    
+    <!-- Semantic Colors -->
+    <color name="success">#FF4CAF50</color>
+    <color name="warning">#FFFBCEB1</color>
+    <color name="error">#FFFF004F</color>
+    <color name="info">#FFA4DDED</color>
+    
+    <!-- Mood Colors - Light Theme -->
+    <color name="mood_depressed">#CC0000FF</color>
+    <color name="mood_low">#800000FF</color>
+    <color name="mood_neutral">#FFA3B8C0</color>
+    <color name="mood_good">#FFFF6600</color>
+    <color name="mood_elevated">#FFFF0000</color>
+    
+    <!-- Mood Colors - Dark Theme -->
+    <color name="mood_depressed_dark">#CC3333FF</color>
+    <color name="mood_low_dark">#806666FF</color>
+    <color name="mood_neutral_dark">#FFB3C8CC</color>
+    <color name="mood_good_dark">#FFFF8833</color>
+    <color name="mood_elevated_dark">#FFFF3333</color>
+    
+    <!-- Common Colors -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="dark_background">#FF121212</color>
+    
+    <!-- Legacy Colors (for migration) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+</resources>
