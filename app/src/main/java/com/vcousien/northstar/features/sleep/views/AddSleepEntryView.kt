@@ -389,7 +389,7 @@ private fun SleepTimePickerButton(
 }
 
 /**
- * Simple date/time picker dialog
+ * Material3 Date and Time Picker Dialog
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -400,79 +400,175 @@ private fun SimpleDateTimePicker(
 ) {
     val timeZone = TimeZone.currentSystemDefault()
     val localDateTime = initialTime.toLocalDateTime(timeZone)
+    val now = Clock.System.now()
 
-    var selectedHour by remember { mutableStateOf(localDateTime.hour) }
-    var selectedMinute by remember { mutableStateOf(localDateTime.minute) }
+    var selectedDate by remember { mutableStateOf(localDateTime.date) }
+    var showDatePicker by remember { mutableStateOf(false) }
 
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = {
-            Text("Select Time", style = NSTypography.heading3)
-        },
-        text = {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                // Simple hour and minute pickers
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(NSSpacing.lg),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text("Hour", style = NSTypography.caption)
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            IconButton(onClick = { selectedHour = (selectedHour - 1 + 24) % 24 }) {
-                                Text("-")
-                            }
-                            Text(
-                                text = String.format("%02d", selectedHour),
-                                style = NSTypography.heading2,
-                                modifier = Modifier.width(60.dp)
-                            )
-                            IconButton(onClick = { selectedHour = (selectedHour + 1) % 24 }) {
-                                Text("+")
-                            }
-                        }
-                    }
+    val timePickerState = rememberTimePickerState(
+        initialHour = localDateTime.hour,
+        initialMinute = localDateTime.minute,
+        is24Hour = false
+    )
 
-                    Text(":", style = NSTypography.heading2)
-
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text("Minute", style = NSTypography.caption)
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            IconButton(onClick = { selectedMinute = (selectedMinute - 15 + 60) % 60 }) {
-                                Text("-")
-                            }
-                            Text(
-                                text = String.format("%02d", selectedMinute),
-                                style = NSTypography.heading2,
-                                modifier = Modifier.width(60.dp)
-                            )
-                            IconButton(onClick = { selectedMinute = (selectedMinute + 15) % 60 }) {
-                                Text("+")
-                            }
-                        }
-                    }
-                }
+    val datePickerState = rememberDatePickerState(
+        initialSelectedDateMillis = localDateTime.date.toEpochDays() * 24L * 60 * 60 * 1000,
+        yearRange = IntRange(2020, now.toLocalDateTime(timeZone).year),
+        selectableDates = object : SelectableDates {
+            override fun isSelectableDate(utcTimeMillis: Long): Boolean {
+                // Only allow dates up to today
+                return utcTimeMillis <= now.toEpochMilliseconds()
             }
-        },
-        confirmButton = {
-            TextButton(onClick = {
-                // Create new Instant with selected time
-                val dayStart = localDateTime.date.toEpochDays() * 24L * 60 * 60 * 1000
-                val newTime = Instant.fromEpochMilliseconds(dayStart) +
-                        selectedHour.hours + selectedMinute.minutes
-                onConfirm(newTime)
-            }) {
-                Text("OK")
-            }
-        },
-        dismissButton = {
-            TextButton(onClick = onDismiss) {
-                Text("Cancel")
+
+            override fun isSelectableYear(year: Int): Boolean {
+                return year <= now.toLocalDateTime(timeZone).year
             }
         }
     )
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Surface(
+            shape = MaterialTheme.shapes.large,
+            tonalElevation = 6.dp,
+            color = DesignTokens.Colors.cardBackground
+        ) {
+            Column(
+                modifier = Modifier.padding(NSSpacing.lg),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "Select Date & Time",
+                    style = NSTypography.heading3,
+                    color = DesignTokens.Colors.textPrimary,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = NSSpacing.md)
+                )
+
+                // Date selector button
+                OutlinedButton(
+                    onClick = { showDatePicker = true },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = NSSpacing.md),
+                    colors = ButtonDefaults.outlinedButtonColors(
+                        containerColor = DesignTokens.Colors.background
+                    )
+                ) {
+                    Text(
+                        text = formatDateForDisplay(selectedDate),
+                        style = NSTypography.body,
+                        color = DesignTokens.Colors.textPrimary
+                    )
+                }
+
+                TimePicker(
+                    state = timePickerState,
+                    colors = TimePickerDefaults.colors(
+                        clockDialColor = DesignTokens.Colors.background,
+                        selectorColor = DesignTokens.Colors.primary,
+                        containerColor = DesignTokens.Colors.cardBackground,
+                        periodSelectorBorderColor = DesignTokens.Colors.border,
+                        clockDialSelectedContentColor = DesignTokens.Colors.onPrimary,
+                        clockDialUnselectedContentColor = DesignTokens.Colors.textPrimary,
+                        periodSelectorSelectedContainerColor = DesignTokens.Colors.primary,
+                        periodSelectorUnselectedContainerColor = DesignTokens.Colors.background,
+                        periodSelectorSelectedContentColor = DesignTokens.Colors.onPrimary,
+                        periodSelectorUnselectedContentColor = DesignTokens.Colors.textPrimary,
+                        timeSelectorSelectedContainerColor = DesignTokens.Colors.primary,
+                        timeSelectorUnselectedContainerColor = DesignTokens.Colors.background,
+                        timeSelectorSelectedContentColor = DesignTokens.Colors.onPrimary,
+                        timeSelectorUnselectedContentColor = DesignTokens.Colors.textPrimary
+                    )
+                )
+
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = NSSpacing.lg),
+                    horizontalArrangement = Arrangement.End
+                ) {
+                    TextButton(onClick = onDismiss) {
+                        Text(
+                            "Cancel",
+                            color = DesignTokens.Colors.textPrimary
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.width(NSSpacing.md))
+
+                    TextButton(onClick = {
+                        // Create new Instant with selected date and time
+                        val dayStart = selectedDate.toEpochDays() * 24L * 60 * 60 * 1000
+                        val newTime = Instant.fromEpochMilliseconds(dayStart) +
+                                timePickerState.hour.hours + timePickerState.minute.minutes
+
+                        // Validate that the time is not in the future
+                        if (newTime <= now) {
+                            onConfirm(newTime)
+                        }
+                    }) {
+                        Text(
+                            "OK",
+                            color = DesignTokens.Colors.primary
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    // Date Picker Dialog
+    if (showDatePicker) {
+        DatePickerDialog(
+            onDismissRequest = { showDatePicker = false },
+            confirmButton = {
+                TextButton(onClick = {
+                    datePickerState.selectedDateMillis?.let { millis ->
+                        selectedDate = kotlinx.datetime.Instant.fromEpochMilliseconds(millis)
+                            .toLocalDateTime(timeZone).date
+                    }
+                    showDatePicker = false
+                }) {
+                    Text("OK", color = DesignTokens.Colors.primary)
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDatePicker = false }) {
+                    Text("Cancel", color = DesignTokens.Colors.textPrimary)
+                }
+            },
+            colors = DatePickerDefaults.colors(
+                containerColor = DesignTokens.Colors.cardBackground
+            )
+        ) {
+            DatePicker(
+                state = datePickerState,
+                colors = DatePickerDefaults.colors(
+                    containerColor = DesignTokens.Colors.cardBackground,
+                    selectedDayContainerColor = DesignTokens.Colors.primary,
+                    todayContentColor = DesignTokens.Colors.primary,
+                    todayDateBorderColor = DesignTokens.Colors.primary
+                )
+            )
+        }
+    }
+}
+
+/**
+ * Format date for display
+ */
+private fun formatDateForDisplay(date: kotlinx.datetime.LocalDate): String {
+    val formatter = SimpleDateFormat("EEE, MMM d, yyyy", Locale.getDefault())
+    val calendar = Calendar.getInstance().apply {
+        set(Calendar.YEAR, date.year)
+        set(Calendar.MONTH, date.monthNumber - 1)
+        set(Calendar.DAY_OF_MONTH, date.dayOfMonth)
+    }
+    return formatter.format(calendar.time)
 }
 
 /**

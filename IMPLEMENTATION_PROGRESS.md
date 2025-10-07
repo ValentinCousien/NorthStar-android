@@ -151,14 +151,18 @@
   - *Android*: `/app/src/main/java/com/vcousien/northstar/app/ContentView.kt`
 
 #### **Settings & Onboarding (50-53)**
-- [ ] **Prompt #50**: Create OnboardingView composable with feature introduction flow
+- [x] **Prompt #50**: Create OnboardingView composable with feature introduction flow
   - *iOS Ref*: `/NorthStar/Features/Onboarding/Views/OnboardingView.swift`
-- [ ] **Prompt #51**: Implement SettingsView composable with app preferences
+  - *Android*: `/app/src/main/java/com/vcousien/northstar/features/onboarding/views/OnboardingView.kt`
+- [x] **Prompt #51**: Implement SettingsView composable with app preferences
   - *iOS Ref*: `/NorthStar/Features/Settings/SettingsView.swift`
-- [ ] **Prompt #52**: Create UserSettingsEditView composable for user profile settings
+  - *Android*: `/app/src/main/java/com/vcousien/northstar/features/settings/views/SettingsView.kt`
+- [x] **Prompt #52**: Create UserSettingsEditView composable for user profile settings
   - *iOS Ref*: `/NorthStar/Features/Settings/UserSettingsEditView.swift`
-- [ ] **Prompt #53**: Implement DebugView composable for development debugging
+  - *Android*: `/app/src/main/java/com/vcousien/northstar/features/settings/views/UserSettingsEditView.kt`
+- [x] **Prompt #53**: Implement DebugView composable for development debugging
   - *iOS Ref*: `/NorthStar/Features/Settings/DebugView.swift`
+  - *Android*: `/app/src/main/java/com/vcousien/northstar/features/settings/views/DebugView.kt`
 
 #### **Notifications & System Integration (54-56)**
 - [ ] **Prompt #54**: Implement NotificationManager for medication reminders and system notifications

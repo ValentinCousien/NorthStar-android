@@ -30,7 +30,7 @@ object Strings {
 
     // MARK: - Onboarding
     object Onboarding {
-        val welcome @Composable get() = stringResource(R.string.onboarding_welcome)
+        val welcome @Composable get() = stringResource(R.string.onboarding_welcome_title)
         val welcomeDescription @Composable get() = stringResource(R.string.onboarding_welcome_description)
         
         val moodTitle @Composable get() = stringResource(R.string.onboarding_mood_title)
@@ -278,7 +278,6 @@ object Strings {
         val notifications @Composable get() = stringResource(R.string.settings_notifications)
         val privacy @Composable get() = stringResource(R.string.settings_privacy)
         val data @Composable get() = stringResource(R.string.settings_data)
-        val sync @Composable get() = stringResource(R.string.settings_sync)
         val export @Composable get() = stringResource(R.string.settings_export)
         val about @Composable get() = stringResource(R.string.settings_about)
         val version @Composable get() = stringResource(R.string.settings_version)
@@ -286,14 +285,6 @@ object Strings {
         // Cloud sync settings
         val cloudSync @Composable get() = stringResource(R.string.settings_cloud_sync)
         val cloudSyncDescription @Composable get() = stringResource(R.string.settings_cloud_sync_description)
-        val syncStatus @Composable get() = stringResource(R.string.settings_sync_status)
-        val lastSync @Composable get() = stringResource(R.string.settings_last_sync)
-        val syncNow @Composable get() = stringResource(R.string.settings_sync_now)
-
-        // Privacy
-        val dataPrivacy @Composable get() = stringResource(R.string.settings_data_privacy)
-        val localStorage @Composable get() = stringResource(R.string.settings_local_storage)
-        val privacyDescription @Composable get() = stringResource(R.string.settings_privacy_description)
     }
 
     // MARK: - Insights

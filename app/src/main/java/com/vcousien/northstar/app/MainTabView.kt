@@ -9,6 +9,7 @@ import com.vcousien.northstar.core.designsystem.DesignTokens
 import com.vcousien.northstar.features.insights.views.InsightsView
 import com.vcousien.northstar.features.medication.views.MedicationLogView
 import com.vcousien.northstar.features.mood.views.MoodLogView
+import com.vcousien.northstar.features.settings.views.SettingsView
 import com.vcousien.northstar.features.sleep.views.SleepLogView
 
 /**
@@ -83,10 +84,10 @@ fun MainTabView(
                 )
             }
             AppTab.SETTINGS -> {
-                // TODO: Implement SettingsView in future prompt
-                // For now, show Insights view as placeholder
-                InsightsView(
-                    modifier = Modifier.padding(paddingValues)
+                SettingsView(
+                    onNavigateToInsights = {
+                        selectedTab = AppTab.HOME // Navigate to insights via home for now
+                    }
                 )
             }
         }

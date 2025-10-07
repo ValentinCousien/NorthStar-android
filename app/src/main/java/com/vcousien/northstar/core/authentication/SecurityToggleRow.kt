@@ -33,14 +33,26 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.FragmentActivity
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.vcousien.northstar.core.designsystem.DesignTokens
 import com.vcousien.northstar.core.designsystem.NSSpacing
 import com.vcousien.northstar.core.designsystem.NSTypography
 import com.vcousien.northstar.core.designsystem.components.NSCard
 import com.vcousien.northstar.core.storage.UserSettingsManager
+import dagger.hilt.EntryPoint
+import dagger.hilt.InstallIn
+import dagger.hilt.android.EntryPointAccessors
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.launch
+
+/**
+ * Hilt EntryPoint to access BiometricAuthManager from Composable
+ */
+@EntryPoint
+@InstallIn(SingletonComponent::class)
+interface BiometricAuthManagerEntryPoint {
+    fun biometricAuthManager(): BiometricAuthManager
+}
 
 /**
  * Enhanced settings row for biometric authentication with better UX
@@ -62,13 +74,22 @@ import kotlinx.coroutines.launch
 @Composable
 fun SecurityToggleRow(
     userSettingsManager: UserSettingsManager,
-    authManager: BiometricAuthManager = hiltViewModel(),
     onToggle: (Boolean) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
     val activity = context as? FragmentActivity
     val coroutineScope = rememberCoroutineScope()
+
+    // Get BiometricAuthManager from Hilt
+    val appContext = context.applicationContext
+    val authManager = remember {
+        val entryPoint = EntryPointAccessors.fromApplication(
+            appContext,
+            BiometricAuthManagerEntryPoint::class.java
+        )
+        entryPoint.biometricAuthManager()
+    }
     
     // Collect state from managers
     val securityEnabled by userSettingsManager.securityEnabled.collectAsStateWithLifecycle()

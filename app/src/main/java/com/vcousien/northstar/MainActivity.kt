@@ -37,10 +37,6 @@ class MainActivity : ComponentActivity() {
         
         setContent {
             NorthStarTheme {
-                LaunchedEffect(Unit) {
-                    appViewModel.appDidLaunch()
-                }
-
                 NorthStarApp(appViewModel)
             }
         }

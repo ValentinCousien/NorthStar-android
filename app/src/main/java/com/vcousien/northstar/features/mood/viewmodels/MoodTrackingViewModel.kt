@@ -238,6 +238,7 @@ class MoodTrackingViewModel @Inject constructor(
      */
     fun cancelEditing() {
         isAddingNewEntry = false
+        shouldShowAddSheet = false
         selectedEntryId = null
         showingEntryDetail = false
     }

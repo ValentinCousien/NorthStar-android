@@ -35,7 +35,7 @@ fun MedicationLogView(
     viewModel: MedicationViewModel = viewModel(),
     modifier: Modifier = Modifier
 ) {
-    var shouldShowAddSheet by remember { mutableStateOf(false) }
+    val shouldShowAddSheet = viewModel.shouldShowAddSheet
 
     Scaffold(
         topBar = {
@@ -75,7 +75,7 @@ fun MedicationLogView(
             // Today's medications card
             TodayMedicationCard(
                 viewModel = viewModel,
-                onAddMedicationClick = { shouldShowAddSheet = true },
+                onAddMedicationClick = { viewModel.prepareNewMedication() },
                 modifier = Modifier.padding(horizontal = NSSpacing.screenEdge, vertical = NSSpacing.md)
             )
 
